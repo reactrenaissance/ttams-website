@@ -1,0 +1,7 @@
+{
+    "imports": {
+      "https://deno.land/": "https://deno.land/",
+      "@supabase/": "https://esm.sh/@supabase/"
+    }
+  }
+  

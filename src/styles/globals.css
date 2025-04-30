@@ -19,3 +19,938 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.container {
+  max-width: 1750px; /* Adjust this based on your preference */
+  margin: 0 auto; /* Centers the content */
+  padding: 0 20px; /* Adds a bit of space on the sides */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  z-index: 10;
+  position: relative;
+  z-index: 10;
+}
+
+
+.menubar {
+  padding: 15px 20px;
+  z-index: 10;
+  background-color: transparent;
+  width: auto;
+  position: relative;
+  display: flex;
+  gap: 2rem;
+} 
+
+.authbar {
+  display: flex;
+  position: absolute;
+  right: 0px;
+  z-index: 20;
+}
+
+.auth-button {
+  background-color: #912B22;
+  align-items: center;
+  width: 187.25px;
+  line-height: 13px;
+}
+
+.footer {
+  background-color: transparent;
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-text {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color:#505050;
+}
+
+/* Signature */
+.footer-signature {
+  font-size: 12px;
+  font-style: italic;
+  color: black;
+}
+
+.footer-name {
+  font-weight: bold;
+  color: #936C5E;
+  text-decoration: none;
+}
+
+.footer-name:hover {
+  text-decoration: underline;
+}
+
+/* Links Section */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 18px 0;
+}
+
+.footer-links a {
+  font-size: 13px;
+  color: #936C5E;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.p-styles {
+  margin: 10px 125px;
+}
+
+.h1-styles {
+  padding-bottom: 10px; 
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px 125px;
+}
+
+.h2-styles {
+  padding-bottom: 10px; 
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 125px;
+}
+
+.h3-styles {
+  padding-bottom: 10px; 
+  font-size: 16px;
+  font-weight: bold;
+  margin: 25px 100px;
+  text-align: center;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+}
+
+.logo-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+} 
+
+/* .logo-slogan-container {
+
+}
+
+.slogan {
+  text-align: center;
+  display: flex;
+} */
+
+.hero-section {
+  background-image: url('/images/home/homepage-design-pieces.svg');
+  width: 100%;
+  height: 817px;
+}
+
+.main-content {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+.hero-banner-logo-container {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.home-bottom-half {
+  background-image: url('/images/home/home-bottom-half.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 80px 20px;
+  min-height: 60vh;
+}
+
+/* PERFECT CIRCLE */
+.ellipse-container {
+  background: linear-gradient(
+    0deg,
+    #9a7747 0%,
+    #b59c6f 67%,
+    #f9e0a4 100%
+    );
+  
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px;
+  text-align: center;
+  color: #0a0a0a;
+}
+
+/* TEXT */
+.ellipse-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.ellipse-container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE TWEAK */
+@media (max-width: 600px) {
+  .ellipse-container {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+  }
+
+  .ellipse-container h1 {
+    font-size: 1.3rem;
+  }
+
+  .ellipse-container p {
+    font-size: 0.95rem;
+  }
+}
+
+.navbar-gradient-bg {
+  background: linear-gradient(
+    90deg,
+    #043056 20%,
+    #215C79 35%,
+    #0D3D61 100%
+    );
+  position: relative;
+  z-index: 10;
+}
+
+.about-hero {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Background image */
+.about-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0a0a0a;
+  background-image: url('/images/about-pages/about-ttams/at-banner.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(0.4) brightness(0.7);
+  transition: filter 0.4s ease;
+  z-index: 1;
+}
+
+/* Foreground text/logo */
+.about-hero-overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  transition: opacity 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Hover behaviour */
+.about-hero:hover .about-hero-bg {
+  filter: none;
+}
+
+.about-hero:hover .about-hero-overlay {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.about-bottom-half {
+  display: flex;
+}
+
+.about-bottom-left {
+  width: 50%;
+}
+
+.about-bottom-right {
+  width: 50%;
+  height: auto;
+  background-color: #C1D3F4;
+  color: #0a0a0a;
+  padding: 40px 0px;
+}
+
+@media (max-width: 768px) {
+  .about-bottom-half {
+    flex-direction: column;
+  }
+
+  .about-bottom-left,
+  .about-bottom-right {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+
+.gi-banner {
+  background-image: url('/images/about-pages/general-information/gi-banner.svg');
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 75%
+}
+
+
+
+.oa-left,
+.oa-right {
+  width: 100%;
+  padding: 0 30px;
+}
+
+@media (min-width: 900px) {
+
+  .oa-left {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .oa-right {
+    width: 60%;
+  }
+}
+
+.gi-bottom-texts {
+  display: flex;
+  align-items: flex-start;
+}
+
+.gi-left-text {
+  width: 50%;
+}
+
+
+.gi-bottom-part {
+  text-align: center;
+  top: 30px;
+  background-color: #C5A891;
+  color: #0a0a0a;
+  padding: 30px 0px
+}
+
+.ifm-top-half {
+  background-image: url('/images/about-pages/ttams-fam-mediation/ifm-banner.svg');
+  width: 100%;
+  padding-top: 101%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.ifm-title {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #EBDDBD;
+  border-color: #4A5740;
+  border-width: 6px;
+  border-radius: 80px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35vh;
+  padding: 5px
+}
+
+.ifm-bottom-half {
+  display: flex;
+  width: 100%;
+  color: #ffffff;
+}
+
+.ifm-bottom-left {
+  width: 50%;
+  background-color: #CFC4B2;
+  padding-top: 5%;
+}
+
+.ifm-bottom-right {
+  width: 50%;
+  background-color: #859673;
+}
+
+@media (max-width: 900px) {
+  .ifm-bottom-half {
+    flex-direction: column;
+  }
+
+  .ifm-bottom-left,
+  .ifm-bottom-right {
+    width: 100%;
+  }
+
+  .ifm-bottom-left {
+    padding-top: 10%; /* Optional: adds breathing room on mobile */
+  }
+
+  .ifm-bottom-right > div {
+    flex-direction: column; /* Stack title + image vertically */
+  }
+
+  .ifm-bottom-right h1,
+  .ifm-bottom-right img {
+    width: 100% !important;
+    text-align: center;
+  }
+}
+
+.rc-bottom-half {
+  display: flex;
+  justify-content: center;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.rc-bottom-left {
+  background-image: url('/images/therapies-pages/relationships-counselling/rc-bottom-left.svg');
+  height: auto;
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50%;
+  position: relative;
+  box-sizing: border-box; 
+  display: flex; 
+  justify-content: center; 
+  text-align:start;
+}
+
+.rc-couple-corner {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  width: 140px; 
+  height: auto;
+  z-index: 6;
+}
+
+
+.rc-bottom-right {
+  background-image: url('/images/therapies-pages/relationships-counselling/rc-bottom-right.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5% 0px;
+}
+
+.rc-couple-icon {
+  width: 195px; 
+  height: auto;
+  /* margin-bottom: 10rem; */
+}
+
+@media (max-width: 900px) {
+  .rc-bottom-half {
+    flex-direction: column;
+    max-width: 100%; /* Let it span full width on smaller screens */
+  }
+
+  .rc-bottom-left,
+  .rc-bottom-right {
+    width: 100%;
+    padding: 5% 20px; /* Optional: some inner breathing room */
+  }
+
+  .rc-couple-corner {
+    position: static;
+    width: 100px;
+    margin: 20px auto 0; /* center the image if needed */
+  }
+
+  .rc-couple-icon {
+    width: 150px;
+    margin-top: 20px;
+  }
+}
+
+
+.wellbeing-mid-part {
+  display: flex;
+  max-width: 100%;
+}
+
+.wellbeing-mid-left {
+  width: 50%;
+  margin: 50px 75px;
+}
+
+.wellbeing-mid-right {
+  width: 50%;
+  color: black;
+  margin: 40px 75px;
+  background-color: #F3E8D8;
+}
+
+.wb-overlapping-image {
+  position: relative;
+  margin-top: -75px; /* overlap effect */
+  margin-bottom: 20px;
+  margin-left: 205px;
+  z-index: 10;
+}
+
+
+
+.tc-top-half {
+  background-image: url('/images/about-pages/therapeutic-counselling/tc-banner.svg');
+  width: 100%;
+  padding-top: 76%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 3;
+  position: relative;
+}
+
+.tc-bottom-half {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.tc-bottom-left {
+  position: relative;
+  z-index: 0;
+  background-color: #9C828D;
+  color: #ffffff;
+  width: 50%;
+  margin-top: -7%;
+  padding-top: 10%;
+}
+
+.tc-bottom-right {
+  max-width: 50%;
+  color: #0a0a0a;
+}
+
+
+
+.fc-top-half {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.fc-top-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 8% 20%;
+}
+
+.fc-top-right {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.fc-mid-half {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 30px 0px;
+}
+
+.fc-mid-left {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: flex-start;
+}
+
+.fc-more-button {
+  position: relative;
+  margin: 10px 0px 20px 60%;
+}
+
+.fc-mid-right {
+  display: flex;
+  flex-direction: column;
+  /* align-items: baseline;
+  padding: 4%; */
+}
+
+.fc-bottom-half {
+  background-color: #e0d4bf;
+  padding: 60px 40px;
+}
+
+.fc-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.fc-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.fc-card-image {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.fc-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.fc-card-content h3 {
+  font-size: 0.9rem;
+  color: #4c2e15;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.fc-card-content p {
+  font-size: 0.95rem;
+  color: #4c2e15;
+  margin: 0;
+}
+
+.fc-toggle {
+  background: none;
+  border: none;
+  color: #8b4513;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+}
+
+.fc-toggle:hover {
+  text-decoration: underline;
+}
+
+.fc-card-expand p {
+  margin-bottom: 1rem;
+}
+
+.fm-top-half {
+  background-image: url('/images/therapies-pages/family-mediation/fm-banner.png');
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 100%;
+  position: relative;
+}
+
+.fm-title {
+  background-color: #EBDDBD;
+  text-align: center;
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  border-radius: 24%;
+  border-color: #4A5740;
+  border-width: 3px;
+  /* align-items: center; */
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #A17F4E;
+}
+
+.fm-mid-part {
+  display: flex;
+  max-width: 100%;
+  position: relative;
+}
+
+.fm-mid-left {
+  color: #6D6D6D;
+  width: 50%;
+  position: absolute;
+  top: 80%;
+  padding-top: 12px;
+}
+
+.fm-mid-right {
+  width: 40%;
+  background-color: #5F817C;
+  border-radius: 70px;
+  position: relative;
+  left: 55%;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.fm-bottom-part {
+  text-align: center;
+}
+
+.fm-box-message {
+  background-color: #EDE1C4;
+}
+
+.fm-underline {
+  width: 60%;
+  margin: 0.5rem auto 2rem auto; /* centers the line under text */
+  height: 3px;
+  background-color: #6D6D6D;
+  border: none;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .fm-mid-part {
+    flex-direction: column;
+  }
+
+  .fm-mid-left,
+  .fm-mid-right {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+.card-section {
+  padding: 60px 20px;
+}
+
+.fd-heading {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #505050;
+  margin-bottom: 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin: 0 auto 60px;
+  max-width: 1200px;
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  padding: 20px;
+  min-height: 300px;
+  position: relative;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: all 0.3s ease;
+}
+
+.card-title {
+  background: #F9F3EC;
+  padding: 10px 15px;
+  border-radius: 14px;
+  font-weight: bold;
+  font-size: 14px;
+  max-width: 90%;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  background: rgba(255,255,255,0.8);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.read-more {
+  color: #2A4C7E;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.irm-top-half {
+  background-image: url('/images/about-pages/intro-to-restorative-justice/irm-banner.svg');
+  width: 100%;
+  background-repeat: no-repeat;
+  text-align: center; 
+  background-position: center top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 968px;
+}
+
+.irm-bottom-half {
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+}
+
+.irm-bottom-left {
+  background-color: #AFC5A6;
+  max-width: 50%;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;  
+}
+
+.irm-bottom-right {
+  color: black;
+  max-width: 50%;
+  text-align: start;
+}
+
+.irm-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.3); /* light white line */
+  margin: 0 auto;
+  width: 80%;
+}
+
+.rm-top-half {
+  background-image: url('/images/therapies-pages/restorative-justice/rm-banner.svg');
+  width: 100%;
+  background-repeat: no-repeat;
+  text-align: center; 
+  background-position: center top;
+  display: flex;
+  justify-content: center;
+  padding: 100px;
+  height: 957px;
+}
+
+.rm-bottom-half {
+  display: flex;
+  max-width: 84.15%;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.rm-bottom-left {
+  background-color: #81957C;
+  width: 50%
+}
+
+.rm-bottom-right {
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .rm-bottom-half {
+    flex-direction: column;
+  }
+  .rm-bottom-left,
+  .rm-bottom-right {
+    width: 100%;
+  }
+}
+
+.tariff-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.tariff-page h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tariff-page h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.tariff-page select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tariff-page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 3rem;
+  overflow-x: auto;
+  display: block;
+}
+
+.tariff-page th, .tariff-page td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.tariff-page th {
+  background-color: #f7f7f7;
+  font-weight: 600;
+}
