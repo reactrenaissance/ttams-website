@@ -2,6 +2,9 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function ContactUs() {
   const form = useRef<HTMLFormElement>(null);
@@ -10,7 +13,7 @@ function ContactUs() {
     e.preventDefault();
   
     if (!form.current) return;
-
+  
     emailjs
       .sendForm(
         "service_ca9um0g",
@@ -21,21 +24,23 @@ function ContactUs() {
       .then(
         (result) => {
           console.log(result.text);
-          alert("Message sent successfully!");
+          toast.success("Message sent successfully!"); // ✅ Show toast here
           form.current?.reset();
         },
         (error) => {
           console.log(error.text);
-          alert("Something went wrong. Please try again.");
+          toast.error("Something went wrong. Please try again."); // ✅ Show toast here
         }
       );
   };
+  
 
   return (
     <div style={{ backgroundColor: "#F3E8D8", color: "black", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
       <Navbar />
       <main style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "2rem" }}>
         <h1 className="h1-styles" style={{ marginBottom: "2rem" }}>Contact Us</h1>
+        <ToastContainer position="bottom-right" autoClose={3000} />
         <form ref={form} onSubmit={sendEmail} style={{ maxWidth: "500px", width: "100%", display: "flex", flexDirection: "column", gap: "1rem" }}>
           <input 
             type="text" 
@@ -46,7 +51,7 @@ function ContactUs() {
           />
           <input 
             type="email" 
-            name="email" 
+            name="reply_to" 
             placeholder="Your Email" 
             required
             style={{ padding: "0.75rem", borderRadius: "0.5rem", border: "1px solid #ccc" }}
