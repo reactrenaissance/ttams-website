@@ -1,8 +1,14 @@
 export const metadata = {
-  title: 'Studio Tool',
-  description: 'Tool view for studio',
+  title: 'Studio',
+  description: 'Sanity Studio Embedded',
 };
 
 export default function StudioLayout({ children }: { children: React.ReactNode }) {
-  return <div>{children}</div>;
+  return (
+    <html lang="en">
+      <body>
+        {children}
+      </body>
+    </html>
+  );
 }
