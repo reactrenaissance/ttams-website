@@ -154,19 +154,10 @@ body {
   height: 200px;
 } 
 
-/* .logo-slogan-container {
-
-}
-
-.slogan {
-  text-align: center;
-  display: flex;
-} */
 
 .hero-section {
-  background-image: url('/images/home/homepage-design-pieces.svg');
   width: 100%;
-  height: 817px;
+  height: 60vh;
 }
 
 .main-content {
