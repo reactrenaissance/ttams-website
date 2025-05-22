@@ -49,10 +49,6 @@ const Navbar = () => {
               options={[
                 { label: "About TTAMS", path: "/about/about-ttams" },
                 { label: "General Information", path: "/about/general-information" },
-                { label: "Counselling Wellbeing Focuses", path: "/about/counselling-focuses" },
-                { label: "Therapeutic Counselling", path: "/about/therapeutic-counselling" },
-                { label: "Introduction to Family Mediation", path: "/about/ttams-fam-mediation" },
-                { label: "Introduction to Restorative Justice Mediation", path: "/about/intro-restorative-justice" },
               ]}
             />
           </div>
