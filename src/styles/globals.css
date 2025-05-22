@@ -140,189 +140,34 @@ body {
   text-align: center;
 }
 
-.logo {
-  width: 100%;
-  height: auto;
-}
-
-.logo-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 200px;
-} 
-
-
-.hero-section {
-  width: 100%;
-  height: 60vh;
-}
-
-.main-content {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-
-.hero-banner-logo-container {
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-.home-bottom-half {
-  background-image: url('/images/home/home-bottom-half.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 80px 20px;
-  min-height: 60vh;
-}
-
-/* PERFECT CIRCLE */
-.ellipse-container {
-  background: linear-gradient(
-    0deg,
-    #9a7747 0%,
-    #b59c6f 67%,
-    #f9e0a4 100%
-    );
-  
-  border-radius: 50%;
-  width: 500px;
-  height: 500px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  padding: 40px;
-  text-align: center;
-  color: #0a0a0a;
-}
-
-/* TEXT */
-.ellipse-container h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.ellipse-container p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-/* RESPONSIVE TWEAK */
-@media (max-width: 600px) {
-  .ellipse-container {
-    width: 300px;
-    height: 300px;
-    padding: 20px;
+@keyframes zoomSlow {
+  0% {
+    transform: scale(1);
   }
-
-  .ellipse-container h1 {
-    font-size: 1.3rem;
-  }
-
-  .ellipse-container p {
-    font-size: 0.95rem;
+  100% {
+    transform: scale(1.05);
   }
 }
 
-.navbar-gradient-bg {
-  background: linear-gradient(
-    90deg,
-    #043056 20%,
-    #215C79 35%,
-    #0D3D61 100%
-    );
-  position: relative;
-  z-index: 10;
+.animate-zoom-slow {
+  animation: zoomSlow 30s ease-in-out infinite alternate;
 }
 
-.about-hero {
-  position: relative;
-  height: 70vh;
-  width: 100%;
-  overflow: hidden;
-}
-
-/* Background image */
-.about-hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #0a0a0a;
-  background-image: url('/images/about-pages/about-ttams/at-banner.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  filter: grayscale(0.4) brightness(0.7);
-  transition: filter 0.4s ease;
-  z-index: 1;
-}
-
-/* Foreground text/logo */
-.about-hero-overlay {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  transition: opacity 0.4s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-/* Hover behaviour */
-.about-hero:hover .about-hero-bg {
-  filter: none;
-}
-
-.about-hero:hover .about-hero-overlay {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.about-bottom-half {
-  display: flex;
-}
-
-.about-bottom-left {
-  width: 50%;
-}
-
-.about-bottom-right {
-  width: 50%;
-  height: auto;
-  background-color: #C1D3F4;
-  color: #0a0a0a;
-  padding: 40px 0px;
-}
-
-@media (max-width: 768px) {
-  .about-bottom-half {
-    flex-direction: column;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
-
-  .about-bottom-left,
-  .about-bottom-right {
-    width: 100%;
-    margin: 20px 0;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+
+.animate-fade-in {
+  animation: fadeIn 1.8s ease-out forwards;
+}
+
 
 
 .gi-banner {
