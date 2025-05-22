@@ -36,12 +36,11 @@ const Navbar = () => {
   return (
     <nav className="w-full bg-[#BDB097] border-b border-[#a4947d] px-4 py-2">
       <div className="flex justify-between items-center max-w-7xl mx-auto">
-        {/* Left: Logo or TTAMS */}
         <div className="text-lg font-semibold">
           <Link href="/">TTAMS</Link>
         </div>
 
-        {/* Mobile toggle button */}
+        {/* Mobile toggle */}
         <div className="md:hidden">
           <button onClick={() => setMobileOpen(!mobileOpen)}>
             {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -77,7 +76,6 @@ const Navbar = () => {
           <Link href="/contact-us">Contact Us</Link>
           <Link href="/privacy-policy">Privacy Policy</Link>
 
-          {/* Auth buttons */}
           {user ? (
             <>
               <Link href="/auth/profile/account-settings">
@@ -102,7 +100,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden mt-4 space-y-3 px-4">
+        <div className="md:hidden mt-4 flex flex-col gap-2 px-4 pb-4">
           <Link href="/" onClick={() => setMobileOpen(false)}>Home</Link>
 
           <Dropdown
@@ -127,10 +125,11 @@ const Navbar = () => {
             ]}
           />
 
+          {/* Stacked properly */}
           <Link href="/contact-us" onClick={() => setMobileOpen(false)}>Contact Us</Link>
           <Link href="/privacy-policy" onClick={() => setMobileOpen(false)}>Privacy Policy</Link>
 
-          <div className="pt-2 border-t">
+          <div className="pt-3 border-t border-[#a4947d]">
             {user ? (
               <>
                 <Link href="/auth/profile/account-settings">
