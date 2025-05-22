@@ -14,7 +14,7 @@ export default function Home() {
         <div
           className="absolute inset-0 bg-cover bg-no-repeat bg-bottom"
           style={{
-            backgroundImage: "url('/images/home/homepage-design-pieces.svg')",
+            backgroundImage: "url('/images/home/home-hero.png')",
           }}
         />
         {/* Hero Content */}
@@ -22,7 +22,7 @@ export default function Home() {
           {/* Logo - nudged up */}
           <div className="relative w-72 md:w-80 aspect-[1/1] mt-[-1rem]">
             <Image
-              src="/images/home/ttams-logo.svg"
+              src="/images/home/home-logo.png"
               alt="TTAMS Logo"
               fill
               className="object-contain"
